@@ -1,0 +1,28 @@
+# DosiFeel — reglas permanentes para agentes de desarrollo
+
+## Producto
+PWA de hábitos de suplementos con una sola vendedora, clientes activados por correo y datos persistentes en Neon. No está afiliada ni se presenta como aplicación oficial de FuXion.
+
+## UX
+- Mobile-first, accesibilidad y rendimiento primero; nada de datos ficticios en producción.
+- Mascotas como imágenes estáticas optimizadas por producto, muy expresivas, sin mascot principal. No animar imágenes de mascotas.
+- GSAP exclusivamente para microinteracciones ligeras (entrada de tarjetas/modales y confirmaciones), no canvas, física ni animación constante. Respetar prefers-reduced-motion.
+- Mostrar una sola notificación por toma; tolerancia inicial 60 minutos editable por usuario.
+- Inicio: solo tomas pendientes en orden cronológico; completadas visibles en calendario.
+- Estrella completa/parcial/vacía y neutro cuando no hay tomas. Rachas por producto y general. Los parciales sí cuentan como continuidad, distinguiendo su nivel.
+- Correcciones y apelaciones siempre disponibles: creer declaración de consumo, actualizar inventario y restaurar racha cuando corresponda; conservar auditoría.
+- Al agotarse producto: contacto con la vendedora para reponer o consultar otros; sin automatismos de recomendaciones, etapas o supresión punitiva.
+
+## Comercial y privacidad
+- Solo la vendedora activa clientes y asigna cantidades realmente vendidas.
+- Catálogo consultable por no activos; para productos no asignados ofrecer WhatsApp Solicitar producto.
+- Aviso de reposición al estimar tres días restantes.
+- El seguimiento de constancia/logros solo es visible a la vendedora con consentimiento expreso reversible; ninguna opción de privacidad preseleccionada.
+- No inventar instrucciones de consumo, dosis, beneficios o productos.
+- Una sola vendedora en el MVP; no crear coordinadoras.
+
+## Calidad y operaciones
+- Respetar estructura y migraciones de Neon; no usar localStorage como origen de datos.
+- Verificar despliegues en Vercel y reportar errores verdaderos, no anunciar éxito por build solamente.
+- Pie de página: versión y revisión corta del commit en 8pt o menos.
+- Mantener dependencias ligeras y scripts reproducibles. No exponer secretos en cliente o git.
