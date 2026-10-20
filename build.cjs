@@ -5,3 +5,5 @@ const html=fs.readFileSync('index.html','utf8').replaceAll('__COMMIT_HASH__',rev
 fs.writeFileSync('public/index.html',html);
 fs.copyFileSync(require.resolve('gsap/dist/gsap.min.js'),'public/gsap.min.js');
 console.log('DosiFeel build revision:',revision);
+
+require('esbuild').buildSync({entryPoints:['src/experience.jsx'],bundle:true,minify:true,format:'iife',platform:'browser',target:'es2020',outfile:'public/experience.js'});
