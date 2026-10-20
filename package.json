@@ -1,9 +1,9 @@
 {
   "name": "dosifeel",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
-    "build": "node -e \"console.log('DosiFeel static PWA')\""
+    "build": "node build.cjs"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.0.2"
