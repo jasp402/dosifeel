@@ -1,1 +1,5 @@
-{"version":2,"buildCommand":"mkdir -p public && cp index.html public/index.html","outputDirectory":"public"}
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": "public"
+}
